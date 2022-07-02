@@ -33,7 +33,7 @@ const ListMatches = ({}) => {
                         return(
                             <div className="flex flex-col items-center justify-center gap-5 p-4  mt-14 h-24">
                                 <div className="mb-12 bg-slate-800">
-                                    <Match match={match}/>
+                                    <Match key={index} match={match}/>
                                 </div>
                             </div>
                 )

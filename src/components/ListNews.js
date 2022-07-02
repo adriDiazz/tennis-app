@@ -33,7 +33,7 @@ const ListNews = () => {
                        loading ?  newss.map((news, index) => {
                             return (
                                 <div className="mb-12 bg-slate-800">
-                                    <New news={news}/>
+                                    <New key={index} news={news}/>
                                 </div>
                             )
                         }) : <div className="flex items-center justify-center h-screen"><img className="h-20" src={loader}/></div>  

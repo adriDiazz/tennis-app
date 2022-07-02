@@ -6,6 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { AuthProvider } from './context/authContext';
 import FontStyles from "./fontStyles";
 import 'flowbite'
+import 'flowbite-react'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

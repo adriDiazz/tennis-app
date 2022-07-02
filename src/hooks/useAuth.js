@@ -13,15 +13,15 @@ const useAuth = () => {
         return createUserWithEmailAndPassword(auth, email, password)
     },[])
 
-    const logIn = (email, password) => {
+    const logIn = useCallback((email, password) => {
         return signInWithEmailAndPassword(auth, email, password)
-    }
+    },[])
 
     const LogOut = useCallback(() => {
         return signOut(auth)
     },[])
 
-    const signInGoogle = () => {
+    const signInGoogle = useCallback(() => {
         const googleAuthProvider = new GoogleAuthProvider();
         signInWithPopup(auth, googleAuthProvider)
             .then(res => {
@@ -31,7 +31,7 @@ const useAuth = () => {
             })
         
 
-    }
+    }, [])
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentuser) => {
